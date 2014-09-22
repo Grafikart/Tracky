@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="timr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body ng-controller="AppCtrl">
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="form-group">
+            <input type="email" ng-model="price" class="form-control" id="exampleInputEmail1" placeholder="Your price $/h">
+        </div>
+        <div ng-repeat="(name, tasks) in projects">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th colspan="2">
+                        {{ name }}
+                    </th>
+                    <th style="text-align: right;">
+                        <button ng-click="deleteItem(projects, name)" class="btn btn-danger">Delete</button>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="(task, time) in tasks">
+                    <td width="125" style="vertical-align: middle;">{{ time | time }}</td>
+                    <td style="vertical-align: middle;">{{ task }}</td>
+                    <td width="200" style="text-align: right;">
+                        <button ng-click="deleteItem(tasks, task)" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right; vertical-align: middle;">
+                        {{ sum(tasks) | time }} - <strong style="font-size: 2em;">{{ sum(tasks) * price }} $</strong>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/dashboard.js"></script>
+</html>

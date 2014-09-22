@@ -1,0 +1,17 @@
+{
+    "name": "Simple Time tracker for Freelancers",
+    "description": "Allow time tracking from the browser with syncing ability thanks to chrome storage",
+    "version": "0.1",
+    "background": {"scripts": ["js/background.js"]},
+    "browser_action": {
+        "name": "Click to open the timer",
+        "default_title": "Open Timer",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": [
+        "storage"
+    ],
+    "manifest_version": 2
+}
