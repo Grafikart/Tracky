@@ -1,5 +1,5 @@
 {
-    "name": "Simple Time tracker for Freelancers",
+    "name": "Tracky",
     "description": "Allow time tracking from the browser with syncing ability thanks to chrome storage",
     "version": "0.1",
     "background": {"scripts": ["js/background.js"]},
@@ -9,6 +9,9 @@
         "default_icon": "icon.png",
         "default_popup": "popup.html"
     },
+    "icons": { "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" },
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "permissions": [
         "storage"
