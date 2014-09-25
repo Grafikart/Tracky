@@ -1,4 +1,4 @@
-var app = angular.module('timr', ['Storage']);
+var app = angular.module('tracky', ['Storage']);
 
 app.controller('AppCtrl', function ($scope, Storage) {
 

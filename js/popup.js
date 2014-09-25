@@ -1,4 +1,4 @@
-var app = angular.module('timr', ['Storage', 'AutocompleteDirective', 'TimerDirective']);
+var app = angular.module('tracky', ['Storage', 'AutocompleteDirective', 'TimerDirective']);
 
 app.controller('AppCtrl', function ($scope, Storage) {
 
