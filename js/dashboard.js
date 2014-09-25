@@ -1,27 +1,17 @@
 var app = angular.module('timr', ['Storage']);
 
 app.controller('AppCtrl', function ($scope, Storage) {
+
     $scope.projects = {};
     $scope.price = 40;
 
-    Storage.getProjects().then(function (projects) {
+    Storage.get('projects').then(function (projects) {
         $scope.projects = projects;
     });
 
-    // Get the data from Google Storage
-    if (chrome.storage) {
-        chrome.storage.sync.get('timr', function (val) {
-            val = val.timr;
-            $scope.projects = val.projects == undefined ? {} : val.projects;
-            $scope.$apply();
-        });
-    } else {
-        $scope.loaded = true;
-    }
-
     $scope.deleteItem = function (object, idx) {
         delete object[idx];
-        Storage.saveProjects($scope.projects);
+        Storage.set('projects', $scope.projects);
     };
 
     $scope.sum = function (tasks) {

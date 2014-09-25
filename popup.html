@@ -3,7 +3,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/popup.css">
 </head>
-<body ng-controller="AppCtrl" ng-class="{isrecording: recording, animated: loaded}">
+<body ng-controller="AppCtrl" ng-class="{isrecording: start, animated: loaded}">
     <button class="dashboard" ng-click="dashboard()">Dashboard</button>
     <div class="viewport" ng-if="loaded">
         <div class="container">
@@ -28,7 +28,12 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.ui.js"></script>
     <script src="js/angular.js"></script>
+
     <script src="js/storage.js"></script>
+
+    <script src="js/directives/timer.js"></script>
+    <script src="js/directives/autocomplete.js"></script>
+
     <script src="js/popup.js"></script>
 </body>
 </html>
