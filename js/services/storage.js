@@ -27,6 +27,7 @@ angular.module('Storage', []).factory('Storage', function ($q) {
             if (chrome.storage) {
                 var obj = {};
                 obj[key] = value;
+                obj = JSON.parse(angular.toJson(obj)); // Clean the angular object to avoid $$hakey
                 chrome.storage.sync.set(obj, function () {
                     deferred.resolve(value);
                 });
