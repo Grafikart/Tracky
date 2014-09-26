@@ -7,6 +7,16 @@ app.controller('AppCtrl', function ($scope, Storage) {
     $scope.projects = {};
     $scope.loaded = false;
 
+    function getByName(arr, name){
+        for (var i in arr) {
+            var obj = arr[i];
+            if (obj.name == name) {
+                return obj;
+            }
+        }
+        return false;
+    }
+
     // Change icon when timer is started
     $scope.$watch('start', function(start){
         Storage.set('start', start);
@@ -26,7 +36,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
         $scope.start = start;
     });
     Storage.get('projects').then(function(projects){
-        $scope.projects = projects;
+        $scope.projects = projects ? projects : [];
     })
 
     // Start timer
@@ -47,9 +57,24 @@ app.controller('AppCtrl', function ($scope, Storage) {
             alert('You have to select a task and a project');
         } else {
             var s = Math.floor((Date.now() - $scope.start) / 1000);
-            Storage.appendTo('projects', [$scope.project.name, $scope.project.task], s).then(function(projects){
-                $scope.projects = projects;
-            });
+            var project = getByName($scope.projects, $scope.project.name);
+            if(project === false){
+                project = {
+                    name: $scope.project.name,
+                    tasks: []
+                };
+                $scope.projects.push(project);
+            }
+            var task = getByName(project.tasks, $scope.project.task);
+            if(task === false){
+                task = {
+                    name: $scope.project.task,
+                    time: 0
+                };
+                project.tasks.push(task);
+            }
+            task.time += s;
+            Storage.set('projects', $scope.projects);
             $scope.start = 0;
         }
     };
@@ -67,9 +92,10 @@ app.controller('AppCtrl', function ($scope, Storage) {
     $scope.projectsAutoComplete = {
         source: function (request, response) {
             var array = [];
-            angular.forEach($scope.projects, function (v, k) {
-                if(fuzzy(k, request.term)){
-                    array.push({label: k, value: k});
+            angular.forEach($scope.projects, function (project) {
+                var name = project.name;
+                if(fuzzy(name, request.term)){
+                    array.push({label: name, value: name});
                 }
             });
             response(array);
@@ -85,11 +111,12 @@ app.controller('AppCtrl', function ($scope, Storage) {
     $scope.tasksAutoComplete = {
         source: function (request, response) {
             var array = [];
-            if($scope.projects[$scope.project.name]){
-                console.log($scope.projects[$scope.project.name]);
-                angular.forEach($scope.projects[$scope.project.name], function (v, k) {
-                    if(fuzzy(k, request.term)){
-                        array.push({label: k, value: k});
+            var project = getByName($scope.projects, $scope.project.name);
+            if(project !== false){
+                angular.forEach(project.tasks, function (task) {
+                    var name = task.name
+                    if(fuzzy(name, request.term)){
+                        array.push({label: name, value: name});
                     }
                 });
             }

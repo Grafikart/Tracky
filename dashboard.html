@@ -2,48 +2,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="tracky">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Tracky Dashboard</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body ng-controller="AppCtrl">
+<header class="header">
     <div class="container">
-        <h1>Dashboard</h1>
-        <div class="form-group">
-            <input type="email" ng-model="price" class="form-control" id="exampleInputEmail1" placeholder="Your price $/h">
+
+        <h1>Projects</h1>
+
+        <div class="header_list">
+            <a ng-repeat="project in projects" href="#project-{{ $index }}">{{ project.name }}</a>
         </div>
-        <div ng-repeat="(name, tasks) in projects">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th colspan="2">
-                        {{ name }}
-                    </th>
-                    <th style="text-align: right;">
-                        <button ng-click="deleteItem(projects, name)" class="btn btn-danger">Delete</button>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="(task, time) in tasks">
-                    <td width="125" style="vertical-align: middle;">{{ time | time }}</td>
-                    <td style="vertical-align: middle;">{{ task }}</td>
-                    <td width="200" style="text-align: right;">
-                        <button ng-click="deleteItem(tasks, task)" class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3" style="text-align: right; vertical-align: middle;">
-                        {{ sum(tasks) | time }} - <strong style="font-size: 2em;">{{ sum(tasks) * price }} $</strong>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+
+        <h1>Rate</h1>
+
+        <div class="rate">
+            <div class="rate_text">
+                How much your awesomeness cost ? How much 1 hour of your life worth ?
+            </div>
+            <input type="text" class="rate_input" ng-model="price">
         </div>
     </div>
+</header>
+
+<div class="container">
+
+    <i class="icon icon-menu" ng-click="toggleHeader()"></i>
+
+    <div ng-repeat="project in projects" id="project-{{ $index }}">
+        <div class="project" ng-click="projects = {}">
+            <div class="project_name">{{ project.name }}</div>
+            <div class="tasks">
+                <div class="task" ng-repeat="task in project.tasks">
+                    <input ng-show="editing" type="text" ng-model="task.time" autofocus="editing"
+                           ng-blur="editing = false; sync();" class="task_time">
+                    <span ng-hide="editing" class="task_time" ng-click="editing = true">{{ task.time | time }}</span>
+                    <span class="task_price">{{ price * task.time / 3600 | round }} €</span>
+                    <span class="task_name">{{ task.name }}</span>
+                    <button ng-click="deleteTask(project.tasks, $index)" class="icon icon-delete"></button>
+                </div>
+            </div>
+            <div class="project_info">
+                <div class="project_time"><i class="icon icon-time"></i> {{ sum(project.tasks) | time }}</div>
+                <div class="project_time"><i class="icon icon-money"></i> {{ (sum(project.tasks) / 3600) * (price * 1) | round}}
+                    €
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 <script src="js/jquery.js"></script>
 <script src="js/angular.js"></script>
-<script src="js/storage.js"></script>
+<script src="js/angular.animate.js"></script>
+<script src="js/services/storage.js"></script>
 <script src="js/dashboard.js"></script>
 </html>

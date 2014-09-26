@@ -7,12 +7,10 @@
     <button class="dashboard" ng-click="dashboard()">Dashboard</button>
     <div class="viewport" ng-if="loaded">
         <div class="container">
-            <button ng-click="record()" class="rec-container">
-                <span class="rec"><span><span></span></span></span>
-            </button>
+            <button ng-click="record()" class="rec"><span class="rec_hover"></span></button>
             <timer start="start"></timer>
-            <hr/>
             <form ng-submit="save()">
+                <hr/>
                 <input type="text" ng-model="project.name" placeholder="Project name" autocomplete autocompleteconfig="projectsAutoComplete">
                 <input type="text" ng-model="project.task" placeholder="Task name" autocomplete autocompleteconfig="tasksAutoComplete">
                 <hr/>
@@ -29,7 +27,7 @@
     <script src="js/jquery.ui.js"></script>
     <script src="js/angular.js"></script>
 
-    <script src="js/storage.js"></script>
+    <script src="js/services/storage.js"></script>
 
     <script src="js/directives/timer.js"></script>
     <script src="js/directives/autocomplete.js"></script>
