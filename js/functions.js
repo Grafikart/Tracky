@@ -4,6 +4,5 @@ function fuzzy(value, search){
         regexp += '('+search[i]+')(.*)';
     }
     regexp += '\\b';
-    console.log(regexp);
     return value.match(new RegExp(regexp,'i'));
 }

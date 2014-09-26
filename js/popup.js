@@ -52,7 +52,10 @@ app.controller('AppCtrl', function ($scope, Storage) {
     };
 
     // Save a project + task
-    $scope.save = function(){
+    $scope.save = function(e){
+        if(e && e.keyCode != 13){
+            return false;
+        }
         if($scope.project.name == '' || $scope.project.task == ''){
             alert('You have to select a task and a project');
         } else {
@@ -75,6 +78,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
             }
             task.time += s;
             Storage.set('projects', $scope.projects);
+            $scope.project = {};
             $scope.start = 0;
         }
     };
@@ -102,8 +106,10 @@ app.controller('AppCtrl', function ($scope, Storage) {
         },
         minLength: 0,
         select: function (event, ui) {
-            $scope.project.name = ui.item.label;
-            $scope.$apply();
+            if(ui.item.label){
+                $scope.project.name = ui.item.label;
+                $scope.$apply();
+            }
             return false;
         }
     };
@@ -124,8 +130,10 @@ app.controller('AppCtrl', function ($scope, Storage) {
         },
         minLength: 0,
         select: function (event, ui) {
-            $scope.project.task = ui.item.label;
-            $scope.$apply();
+            if(ui.item.label){
+                $scope.project.task = ui.item.label;
+                $scope.$apply();
+            }
             return false;
         }
     }
