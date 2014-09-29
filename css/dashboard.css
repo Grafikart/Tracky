@@ -1,1 +1,107 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}.ng-enter,.ng-leave{-moz-transition-duration:0.3s;-o-transition-duration:0.3s;-webkit-transition-duration:0.3s;transition-duration:0.3s}.ng-enter-stagger{-webkit-transition-delay:0.1s;transition-delay:0.1s}.ng-enter,.ng-leave.ng-leave-active{opacity:0;-moz-transform:translateX(-150px);-ms-transform:translateX(-150px);-webkit-transform:translateX(-150px);transform:translateX(-150px)}.ng-enter.ng-enter-active,.ng-leave{opacity:1;-moz-transform:translateX(0px);-ms-transform:translateX(0px);-webkit-transform:translateX(0px);transform:translateX(0px)}*{box-sizing:border-box}body{background-color:#e6e6e6;color:#393947;font-family:"Open Sans";font-size:14px}a{color:inherit;text-decoration:none}input{outline:none}button{background-color:transparent;cursor:pointer;border:none;outline:none}.container{width:658px;margin:0 auto}.header{display:none;color:#797985;font-weight:400;padding:28px 0;overflow:hidden;*zoom:1;background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuMCIgeDI9IjAuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFiMWIyOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzMzMzM0MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');background-size:100%;background-image:-webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #1b1b28),color-stop(100%, #333341));background-image:-moz-linear-gradient(top right, #1b1b28,#333341);background-image:-webkit-linear-gradient(top right, #1b1b28,#333341);background-image:linear-gradient(to bottom left, #1b1b28,#333341)}.header h1{margin-bottom:15px;line-height:70px;color:#FFF;font-size:38px;font-weight:700;border-bottom:1px solid #3a3b4a}.header_list{overflow:hidden;*zoom:1;margin:20px 0}.header_list a{display:block;float:left;width:50%;height:28px;line-height:28px;-moz-transition-duration:0.3s;-o-transition-duration:0.3s;-webkit-transition-duration:0.3s;transition-duration:0.3s}.header_list a:hover{color:#FFF}.rate{line-height:33px;height:33px}.rate .rate_text{float:left}.rate .rate_input{float:right;width:131px;height:35px;color:#FFF;text-align:center;font-size:16px;font-weight:600;background-color:#222231;border:none}.icon-menu{margin:25px 0;cursor:pointer}.project{position:relative;height:204px;margin:0 auto 37px auto;background-color:#FFF;border-radius:2px;-moz-box-shadow:0 1px 6px rgba(167,174,182,0.75);-webkit-box-shadow:0 1px 6px rgba(167,174,182,0.75);box-shadow:0 1px 6px rgba(167,174,182,0.75)}.project_name{padding:20px 0 10px 40px;color:#393947;font-size:24px;font-weight:700;border-bottom:1px solid #e6e6e6}.project_info{position:absolute;top:0;right:0;width:177px;height:100%;padding:20px 0 0 20px;background-color:#F9F9F9;color:#393947;line-height:38px;font-size:18px;font-weight:700}.project .icon{vertical-align:middle;margin-right:10px;margin-bottom:4px}.tasks{margin:10px 170px 10px 40px}.task{line-height:32px;vertical-align:middle}.task_time,.task_price{display:inline-block;border:none;color:#929292;width:32px}.task_price{display:inline-block;width:95px;padding:0 25px 0 20px}.task_name{padding-right:15px}.icon{display:inline-block}.icon-sprite,.icon-delete,.icon-menu,.icon-money,.icon-time{background-image:url('../img/icon-s94d44608fa.png');background-repeat:no-repeat}.icon-delete{background-position:0 0;height:9px;width:9px}.icon-delete:hover,.icon-delete.delete-hover{background-position:0 -9px}.icon-menu{background-position:0 -18px;height:20px;width:30px}.icon-money{background-position:0 -38px;height:22px;width:21px}.icon-time{background-position:0 -60px;height:22px;width:21px}
+/*
+Error: Invalid URL: /../img/icon-s03473db7c5.png (not enough parent directories) for `sprite-url'
+        on line 89 of icon/*.png
+        from line 219 of /Users/jeremy/Desktop/Sites/tracky/css/./dashboard.scss
+
+84:     line-height: 33px;
+85:     height: 33px;
+86:     .rate_text {
+87:         float: left;
+88:     }
+89:     .rate_input {
+90:         float: right;
+91:         width: 131px;
+92:         height: 35px;
+93: 
+94:         color: #FFF;
+
+Backtrace:
+icon/*.png:89
+/Users/jeremy/Desktop/Sites/tracky/css/./dashboard.scss:219
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/funcall.rb:303:in `reformat_argument_error'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/funcall.rb:146:in `rescue in _perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/funcall.rb:123:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:289:in `block (2 levels) in visit_if'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:289:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:289:in `block in visit_if'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:288:in `visit_if'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:292:in `visit_if'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/engine.rb:268:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/bin/compass:30:in `block in <top (required)>'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/bin/compass:44:in `call'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.1.0.alpha.3/bin/compass:44:in `<top (required)>'
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid URL: /../img/icon-s03473db7c5.png (not enough parent directories) for `sprite-url'\A         on line 89 of icon/*.png\A         from line 219 of /Users/jeremy/Desktop/Sites/tracky/css/./dashboard.scss\A \A 84:     line-height: 33px;\A 85:     height: 33px;\A 86:     .rate_text {\A 87:         float: left;\A 88:     }\A 89:     .rate_input {\A 90:         float: right;\A 91:         width: 131px;\A 92:         height: 35px;\A 93: \A 94:         color: #FFF;"; }
