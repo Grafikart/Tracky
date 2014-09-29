@@ -107,28 +107,20 @@ button {
     margin-bottom: 20px;
     position: relative;
     display:block;
-    width: 2rem;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     &:after{
         content:"";
         position: absolute;
         display: block;
-        width: 2rem;
+        width: 30px;
         height: 1px;
         left: 0;
-        top: 0;
-        @include box-shadow(0 10px 0 1px #b0b0b0, 0 16px 0 1px #b0b0b0, 0 22px 0 1px #b0b0b0);
+        @include box-shadow(0 10px 0 1.5px #b0b0b0, 0 18px 0 1.5px #b0b0b0, 0 26px 0 1.5px #b0b0b0);
     }
     &:hover:after{
-        content:"";
-        position: absolute;
-        display: block;
-        width: 2rem;
-        height: 1px;
-        left: 0;
-        top: 0;
-        @include box-shadow(0 10px 0 1px #262634, 0 16px 0 1px #262634, 0 22px 0 1px #262634);
+        @include box-shadow(0 10px 0 1.5px #262634, 0 18px 0 1.5px #262634, 0 26px 0 1.5px #262634);
         @include transition-duration(.2s);
     }
 }
@@ -146,6 +138,9 @@ button {
     @include box-shadow(0 1px 2px rgba(167, 174, 182, 0.75));
 
     &_name {
+        display: block;
+        width: 100%;
+        border: none;
         padding: 20px 0 10px 40px;
         color: #393947;
         font-size: 24px;
