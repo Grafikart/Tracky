@@ -1,37 +1,11 @@
-<html ng-app="tracky">
-<head>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/popup.css">
-</head>
-<body ng-controller="AppCtrl" ng-class="{isrecording: start, animated: loaded}">
-    <button class="dashboard" ng-click="dashboard()">Dashboard</button>
-    <div class="viewport" ng-if="loaded">
-        <div class="container">
-            <button ng-click="record()" class="rec"><span class="rec_hover"></span></button>
-            <timer start="start"></timer>
-            <form ng-keypress="save($event)">
-                <hr/>
-                <input type="text" ng-model="project.name" placeholder="Project name" autocomplete autocompleteconfig="projectsAutoComplete">
-                <input type="text" ng-model="project.task" placeholder="Task name" autocomplete autocompleteconfig="tasksAutoComplete">
-                <hr/>
-                <div class="action">
-                    <button class="action-cancel" ng-click="reset()">cancel</button>
-                    <button type="button" class="action-save btn" ng-click="save()">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
+# Tracky
 
-    <script src="js/functions.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.ui.js"></script>
-    <script src="js/angular.js"></script>
+This is a little chrome extension I did to track my time. The main goal was to be able to easily create new project and track time for each task. Thanks to chrome.storage.sync API datas are automatically shared accress chrome instances that use the same account.
 
-    <script src="js/services/storage.js"></script>
+## Demo
 
-    <script src="js/directives/timer.js"></script>
-    <script src="js/directives/autocomplete.js"></script>
+I added support for localstorage and you can try the prototype directly from GitHub [here](http://rawgit.com/Grafikart/tracky/master/popup.html).
 
-    <script src="js/popup.js"></script>
-</body>
-</html>
+## Download for chrome
+
+This extension can be downloaded from [chrome webstore](https://chrome.google.com/webstore/detail/tracky/nopncmbjiejagfhpkcbdikogbjcjhhll?hl=fr)
