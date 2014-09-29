@@ -18,6 +18,7 @@ body {
     color: #393947;
     font-family: "Open Sans";
     font-size: 14px;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -101,10 +102,37 @@ button {
     }
 }
 
-.icon-menu {
-    margin: 25px 0;
+.hamburger{
+    margin-top:10px;
+    margin-bottom: 20px;
+    position: relative;
+    display:block;
+    width: 2rem;
+    height: 20px;
     cursor: pointer;
+    &:after{
+        content:"";
+        position: absolute;
+        display: block;
+        width: 2rem;
+        height: 1px;
+        left: 0;
+        top: 0;
+        @include box-shadow(0 10px 0 1px #b0b0b0, 0 16px 0 1px #b0b0b0, 0 22px 0 1px #b0b0b0);
+    }
+    &:hover:after{
+        content:"";
+        position: absolute;
+        display: block;
+        width: 2rem;
+        height: 1px;
+        left: 0;
+        top: 0;
+        @include box-shadow(0 10px 0 1px #262634, 0 16px 0 1px #262634, 0 22px 0 1px #262634);
+        @include transition-duration(.2s);
+    }
 }
+
 
 /*------------------------------------*\
     Project
@@ -115,7 +143,7 @@ button {
     margin: 0 auto 37px auto;
     background-color: #FFF;
     border-radius: 2px;
-    @include box-shadow(0 1px 6px rgba(167, 174, 182, 0.75));
+    @include box-shadow(0 1px 2px rgba(167, 174, 182, 0.75));
 
     &_name {
         padding: 20px 0 10px 40px;
@@ -144,6 +172,9 @@ button {
         vertical-align: middle;
         margin-right: 10px;
         margin-bottom: 4px;
+    }
+    &:hover{
+        @include box-shadow(0 1px 8px rgba(167, 174, 182, 0.75));
     }
 
 }
