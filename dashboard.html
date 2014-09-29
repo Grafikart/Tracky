@@ -33,7 +33,7 @@
 
     <div ng-repeat="project in projects" id="project-{{ $index }}">
         <div class="project" ng-click="projects = {}">
-            <div class="project_name">{{ project.name }}</div>
+            <input class="project_name" ng-model="project.name" ng-blur="sync();"></input>
             <div class="tasks">
                 <div class="task" ng-repeat="task in project.tasks">
                     <input ng-show="editing" type="text" ng-model="task.time" autofocus="editing"
