@@ -24,7 +24,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
     /* Delete a task */
     $scope.deleteTask = function (tasks, idx) {
         tasks.splice(idx, 1);
-        // We remove empty projects (without task)
+        // We remove empty projects (without tasks)
         for(var i in $scope.projects){
             var project = $scope.projects[i];
             if(project.tasks.length == 0){
@@ -34,6 +34,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
         $scope.syncProjects();
     };
 
+	/* Add a new Task inside aproject */
     $scope.newTask = function (project) {
         project.tasks.push({
             time: 0,
@@ -56,11 +57,15 @@ app.controller('AppCtrl', function ($scope, Storage) {
         return sum;
     };
 
-
-
+	/* Sync projects using Storage */
     $scope.syncProjects = function(){
         Storage.set('projects', $scope.projects);
     };
+    
+    /* Toggle header */
+    $scope.toggleHeader = function(){
+        $('.header').slideToggle();
+    }
 });
 
 // Auto focus field

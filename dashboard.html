@@ -29,7 +29,7 @@
 
 <div class="container">
 
-    <div class="hamburger" onclick="$('.header').slideToggle();"></div>
+    <div class="hamburger" ng-click="toggleHeader()"></div>
 
     <div ng-repeat="project in projects" id="project-{{ $index }}">
         <div class="project" ng-click="projects = {}">
