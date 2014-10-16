@@ -1,0 +1,167 @@
+@import "compass";
+
+$width: 310px;
+@include global-reset;
+
+button, input, hr {
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+}
+
+/*------------------------------------*\
+    BASE
+\*------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: $width !important;
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+
+    color: #818181;
+    font-family: "Open Sans";
+    font-size: 14px;
+}
+
+hr {
+    display: block;
+    margin: 10px 0;
+    height: 1px;
+    background-color: #DFDFDF;
+}
+
+form {
+    padding: 0 10px;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 0 15px;
+    width: 100%;
+    height: 46px;
+
+    background-color: #F5F5F5;
+    box-shadow: inset 0 1px 2px rgba(229, 229, 229, 0.75);
+
+    @include input-placeholder {
+        color: #B7B7B7;
+        font-style: italic;
+    }
+
+}
+
+button {
+    cursor: pointer !important;
+}
+
+/*------------------------------------*\
+    UI
+\*------------------------------------*/
+.viewport {
+    width: $width;
+    height: 215px;
+    overflow: hidden;
+
+    .isrecording & {
+        height: 250px;
+    }
+}
+
+.container {
+    -webkit-transform: translateY(0);
+    .isrecording & {
+        -webkit-transform: translateY(-220px);
+    }
+}
+
+.animated {
+    .viewport, .container {
+        -webkit-transition-duration: 0.7s;
+    }
+}
+
+/*------------------------------------*\
+    ELEMENTS
+\*------------------------------------*/
+.dashboard {
+    position: absolute;
+    z-index: 1000;
+    top: 5px;
+    right: 5px;
+    text-align: right;
+}
+
+.rec {
+    position: relative;
+    display: block;
+    margin: 5px auto 25px auto;
+    width: 296px;
+    height: 205px;
+    background: url(../img/rec.jpg);
+    &_hover{
+        position: absolute;
+        background: url(../img/rec_hover.png);
+        top: 42px;
+        left: 85px;
+        width: 117px;
+        height: 117px;
+        opacity: 0;
+        @include transition-duration(.3s);
+    }
+    &:hover .rec_hover{
+        opacity: 1;
+    }
+}
+
+.timer {
+    display: block;
+    margin: 15px 0;
+
+    text-align: center;
+    color: #070D2B;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.action {
+    margin: 15px 0;
+    height: 36px;
+
+    .action-cancel {
+        margin-top: 8px;
+        float: left;
+    }
+
+    .action-save {
+        float: right;
+    }
+}
+
+.btn {
+    display: inline-block;
+    width: 89px;
+    height: 36px;
+
+    vertical-align: middle;
+    text-align: center;
+    line-height: 36px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+
+    background-color: #79C13F;
+    @include border-radius(18px);
+}
+
+/*------------------------------------*\
+    JQUERY.UI
+\*------------------------------------*/
+@import "jqui";

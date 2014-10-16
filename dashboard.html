@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="tracky">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Tracky Dashboard</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body ng-controller="AppCtrl">
+<header class="header">
+    <div class="container">
+
+        <h1>Projects</h1>
+
+        <div class="header_list">
+            <a ng-repeat="project in projects" href="#project-{{ $index }}">{{ project.name }}</a>
+        </div>
+
+        <h1>Rate</h1>
+
+        <div class="rate">
+            <div class="rate_text">
+                How much your awesomeness cost ? How much 1 hour of your life worth ?
+            </div>
+            <input type="text" class="rate_input" ng-model="price">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="hamburger" ng-click="toggleHeader()"></div>
+
+    <div ng-repeat="project in projects" id="project-{{ $index }}">
+        <div class="project" ng-click="projects = {}">
+            <input class="project_name" ng-model="project.name" ng-blur="sync();"></input>
+            <div class="tasks">
+                <div class="task" ng-repeat="task in project.tasks">
+                    <input
+                        type="text"
+                        class="task_time"
+                        autofocus="editing"
+                        ng-show="editing"
+                        ng-value="task.time | to_min"
+                        ng-blur="updateTaskTime(task, $event.target.value); editing = false;">
+                    <span ng-hide="editing" class="task_time" ng-click="editing = true">{{ task.time | time }}</span>
+                    <span class="task_price">{{ price * task.time / 3600 | round }} €</span>
+                    <input type="text" class="task_name" ng-model="task.name" ng-blur="syncProjects()">
+                    <button ng-click="deleteTask(project.tasks, $index)" class="icon icon-delete"></button>
+                </div>
+                <button class="tasks-add" ng-click="newTask(project)">+ Add a new task</button>
+            </div>
+            <div class="project_info">
+                <div class="project_time"><i class="icon icon-time"></i> {{ projectTime(project) | time }}</div>
+                <div class="project_time"><i class="icon icon-money"></i> {{ (projectTime(project) / 3600) * (price * 1) | round}}
+                    €
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/angular.animate.js"></script>
+<script src="js/services/storage.js"></script>
+<script src="js/dashboard.js"></script>
+</html>
