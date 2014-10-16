@@ -131,8 +131,9 @@ button {
 \*------------------------------------*/
 .project {
     position: relative;
-    height: 204px;
+    min-height: 204px;
     margin: 0 auto 37px auto;
+    padding-bottom: 10px;
     background-color: #FFF;
     border-radius: 2px;
     @include box-shadow(0 1px 2px rgba(167, 174, 182, 0.75));
@@ -178,6 +179,13 @@ button {
     margin: 10px 170px 10px 40px;
 }
 
+.tasks-add{
+    margin-top: 10px;
+
+    font-size: 0.9em;
+    color: #929292;
+}
+
 .task {
     line-height: 32px;
     vertical-align: middle;
@@ -196,7 +204,11 @@ button {
     }
 
     &_name {
+        border: none;
         padding-right: 15px;
+
+        color: inherit;
+        font-family: inherit;
     }
 }
 

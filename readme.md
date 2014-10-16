@@ -9,3 +9,9 @@ I added support for localstorage and you can try the prototype directly from Git
 ## Download for chrome
 
 This extension can be downloaded from [chrome webstore](https://chrome.google.com/webstore/detail/tracky/nopncmbjiejagfhpkcbdikogbjcjhhll?hl=fr)
+
+## Todo
+
+- Create a task to zip the thing (easier to publish)
+- Add a button to delete a project without having to delete every tasks in it
+- Idea, generate invoices using the datas from project, the invoice would be editable and printable

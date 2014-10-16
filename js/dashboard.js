@@ -3,9 +3,11 @@ var app = angular.module('tracky', ['Storage', 'ngAnimate']);
 app.controller('AppCtrl', function ($scope, Storage) {
 
     $scope.projects = {};
+    $scope.new_task = {};
     $scope.price = 40;
+    $scope.adding = false;
 
-    // Extracting data from Storage
+    /* Loading datas from storage */
     Storage.get('projects').then(function (projects) {
         $scope.projects = projects;
     });
@@ -14,11 +16,12 @@ app.controller('AppCtrl', function ($scope, Storage) {
         $scope.price = price ? price : 40;
     });
 
-    // Auto update price when changed
+    /* Update rates in storage */
     $scope.$watch('price', function(price){
         Storage.set('price', price);
     });
 
+    /* Delete a task */
     $scope.deleteTask = function (tasks, idx) {
         tasks.splice(idx, 1);
         // We remove empty projects (without task)
@@ -28,25 +31,36 @@ app.controller('AppCtrl', function ($scope, Storage) {
                $scope.projects.splice(i, 1);
             }
         }
-        $scope.sync();
+        $scope.syncProjects();
     };
 
-    $scope.sync = function(){
-        Storage.set('projects', $scope.projects);
-    };
+    $scope.newTask = function (project) {
+        project.tasks.push({
+            time: 0,
+            name: 'Task name'
+        });
+    }
 
-    $scope.sum = function (tasks) {
+    /* Update time used on a task */
+    $scope.updateTaskTime = function(task, time){
+        task.time = time * 60;
+        $scope.syncProjects();
+    }
+
+    /* Get time used on a project */
+    $scope.projectTime = function (project) {
         var sum = 0;
-        angular.forEach(tasks, function (task) {
+        angular.forEach(project.tasks, function (task) {
             sum += parseInt(task.time);
         });
         return sum;
     };
 
-    $scope.toggleHeader = function(){
-        $('.header').slideToggle();
-    }
 
+
+    $scope.syncProjects = function(){
+        Storage.set('projects', $scope.projects);
+    };
 });
 
 // Auto focus field
@@ -71,9 +85,16 @@ app.filter('time', function () {
         time = parseInt(time);
         var h = Math.floor(time / 3600);
         var m = Math.floor((time % 3600) / 60);
-        return h + "h" + (m > 10 ? m : '0' + m);
+        return h + "h" + (m >= 10 ? m : '0' + m);
     }
 });
+
+// Convert seconds to min (rounding)
+app.filter('to_min', function(){
+    return function (time) {
+        return Math.round(time / 60);
+    }
+})
 
 // Convert X seconds into 0h40
 app.filter('round', function () {

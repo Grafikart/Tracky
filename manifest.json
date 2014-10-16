@@ -1,7 +1,7 @@
 {
     "name": "Tracky",
     "description": "Allow time tracking from the browser with syncing ability thanks to chrome sync storage",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "background": {"scripts": ["js/background.js"]},
     "browser_action": {
         "name": "Click to open the timer",
