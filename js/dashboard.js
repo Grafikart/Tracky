@@ -52,7 +52,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
     $scope.projectTime = function (project) {
         var sum = 0;
         angular.forEach(project.tasks, function (task) {
-            sum += parseInt(task.time);
+            sum += parseInt(task.time, 10);
         });
         return sum;
     };
@@ -61,7 +61,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
     $scope.syncProjects = function(){
         Storage.set('projects', $scope.projects);
     };
-    
+
     /* Toggle header */
     $scope.toggleHeader = function(){
         $('.header').slideToggle();
@@ -87,7 +87,7 @@ app.directive('autofocus', function(){
 // Convert X seconds into 0h40
 app.filter('time', function () {
     return function (time) {
-        time = parseInt(time);
+        time = parseInt(time, 10);
         var h = Math.floor(time / 3600);
         var m = Math.floor((time % 3600) / 60);
         return h + "h" + (m >= 10 ? m : '0' + m);
