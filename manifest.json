@@ -4,8 +4,8 @@
     "version": "0.1.7",
     "background": {"scripts": ["js/background.js"]},
     "browser_action": {
-        "name": "Click to open the timer",
-        "default_title": "Open Timer",
+        "name": "Cliquez pour ouvrir un timer",
+        "default_title": "Ouvrir un timer",
         "default_icon": "icon.png",
         "default_popup": "popup.html"
     },

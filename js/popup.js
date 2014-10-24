@@ -57,7 +57,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
             return false;
         }
         if($scope.project.name == '' || $scope.project.task == ''){
-            alert('You have to select a task and a project');
+            alert('Vous devez séléctionner une tache et un projet');
         } else {
             var s = Math.floor((Date.now() - $scope.start) / 1000);
             var project = getByName($scope.projects, $scope.project.name);

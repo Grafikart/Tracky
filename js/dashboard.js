@@ -38,7 +38,7 @@ app.controller('AppCtrl', function ($scope, Storage) {
     $scope.newTask = function (project) {
         project.tasks.push({
             time: 0,
-            name: 'Task name'
+            name: 'Nom de la tache'
         });
     }
 
