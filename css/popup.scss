@@ -125,7 +125,8 @@ button {
     display: block;
     margin: 15px 0;
 
-    text-align: center;
+    text-align: left;
+    margin-left:15px;
     color: #070D2B;
     font-size: 32px;
     font-weight: 700;
@@ -142,6 +143,7 @@ button {
 
     .action-save {
         float: right;
+        width:100px;
     }
 }
 

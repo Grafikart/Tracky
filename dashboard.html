@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="tracky">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Tracky Dashboard</title>
+    <title>Tableau de bord de Tracky</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
@@ -10,17 +10,17 @@
 <header class="header">
     <div class="container">
 
-        <h1>Projects</h1>
+        <h1>Projets</h1>
 
         <div class="header_list">
             <a ng-repeat="project in projects" href="#project-{{ $index }}">{{ project.name }}</a>
         </div>
 
-        <h1>Rate</h1>
+        <h1>Prix</h1>
 
         <div class="rate">
             <div class="rate_text">
-                How much your awesomeness cost ? How much 1 hour of your life worth ?
+                How much your awesomeness cost ? Combien coûte 1 heure de votre temps ?
             </div>
             <input type="text" class="rate_input" ng-model="price">
         </div>
@@ -48,7 +48,7 @@
                     <input type="text" class="task_name" ng-model="task.name" ng-blur="syncProjects()">
                     <button ng-click="deleteTask(project.tasks, $index)" class="icon icon-delete"></button>
                 </div>
-                <button class="tasks-add" ng-click="newTask(project)">+ Add a new task</button>
+                <button class="tasks-add" ng-click="newTask(project)">+ Ajouter une nouvelle tache</button>
             </div>
             <div class="project_info">
                 <div class="project_time"><i class="icon icon-time"></i> {{ projectTime(project) | time }}</div>
